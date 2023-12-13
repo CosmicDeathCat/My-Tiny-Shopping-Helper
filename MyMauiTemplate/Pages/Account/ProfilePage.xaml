@@ -9,6 +9,16 @@
     </Shell.BackButtonBehavior>
     
     <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="shoppingToolbarItem"
+                     Text="Shopping Cart" 
+                     Clicked="OnShoppingClicked" 
+                     IconImageSource="{AppThemeBinding Light=shoppingcart.png, Dark=shoppingcart_dark.png}">
+        </ToolbarItem>
+        <ToolbarItem x:Name="profileToolbarItem"
+                     Text="Profile" 
+                     Clicked="OnProfileClicked" 
+                     IconImageSource="{AppThemeBinding Light=person.png, Dark=person_dark.png}">
+        </ToolbarItem>
         <ToolbarItem x:Name="settingsToolbarItem" 
                      Text="Settings" 
                      Clicked="OnSettingsClicked" 

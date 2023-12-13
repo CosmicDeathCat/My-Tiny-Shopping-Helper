@@ -4,6 +4,7 @@ using MyMauiTemplate.Models;
 using MyMauiTemplate.Security;
 using MyMauiTemplate.Services.Interfaces;
 using MyMauiTemplate.Utilities;
+using MyTinyShoppingHelper.Pages.Shopping_Main;
 
 namespace MyMauiTemplate.Pages.Account;
 
@@ -722,5 +723,15 @@ public partial class ProfilePage
         }
         _currentUser.BackupCodes = backupCodes;
         await _userService.SaveUserAsync(_currentUser);
+    }
+
+    private async void OnShoppingClicked(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainShoppingPage(_userService, _popupNavigation, _currentUser));
+    }
+
+    private async void OnProfileClicked(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ProfilePage(_userService, _popupNavigation, _currentUser));
     }
 }
