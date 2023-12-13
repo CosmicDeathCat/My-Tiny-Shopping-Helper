@@ -18,6 +18,8 @@ namespace MyMauiTemplate
             
             window.MinimumWidth = AppConstants.WindowMinimumWidth;
             window.MinimumHeight = AppConstants.WindowMinimumHeight;
+            window.Width = AppConstants.WindowDefaultWidth;
+            window.Height = AppConstants.WindowDefaultHeight;
 
             return window;
 

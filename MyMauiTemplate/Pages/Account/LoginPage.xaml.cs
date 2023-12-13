@@ -4,6 +4,7 @@ using MyMauiTemplate.Models;
 using MyMauiTemplate.Popups.Account;
 using MyMauiTemplate.Services.Interfaces;
 using MyMauiTemplate.Utilities;
+using MyTinyShoppingHelper.Pages.Shopping_Main;
 
 namespace MyMauiTemplate.Pages.Account;
 
@@ -149,7 +150,8 @@ public partial class LoginPage
         }
         
         IoHelper.EnsureUserDirectoryExists(_currentUser);
-        await Navigation.PushAsync(new ProfilePage(_userService, _popupNavigation, _currentUser));
+        //await Navigation.PushAsync(new ProfilePage(_userService, _popupNavigation, _currentUser));
+        await Navigation.PushAsync(new MainShoppingPage(_userService, _popupNavigation, _currentUser));
     }
 
     private async Task LoginSuccess(User user)

@@ -17,4 +17,6 @@ public static class AppConstants
     public const string SqlLiteConnectionString = $"Data Source={DatabaseName}";
     public const int WindowMinimumWidth = 400;
     public const int WindowMinimumHeight = 650;
+    public const int WindowDefaultWidth = 650;
+    public const int WindowDefaultHeight = 650;
 }
